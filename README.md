@@ -43,8 +43,10 @@ directory with static files (html, css, js, images, ...). You can not run a serv
 
 7. Go to the settings page of your repo `https://github.com/{username}/{repo_name}/settings` and go to the section
    `GitHub Pages` and enable it by selecting it as source branch
+   ![Select gh pages branch as source](doc/assets/set-gh-pages-branch.png)
 
 8. GitHub shows a message that your gh-pages branch file content is now publicly available `https://{username}.github.io/{repo-name}`
+   ![Set gh pages branch successful](doc/assets/gh-pages-success.png)
 
 ## Automate this
 Of course, you do not want to do all those steps everytime you change something. So now we are going to automate this.
@@ -68,5 +70,10 @@ we define our workflow. You can [checkout the file](.github/workflows/deploy.yml
     git commit -m 'Setup workflow and provide hello world content'
     git push origin main
     ```
+ 6. You can go the actions tab of you repository where you can now see your workflow being executed
+    ![Actions](doc/assets/workflows.png)
+    
+ 7. That is it! Now, everytime you push something to the main branch it will be automatically deployed and becomes publicly
+available under you gh-pages url (https://zarlex.github.io/github-deploy/)
 
 
