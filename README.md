@@ -1,7 +1,15 @@
 # github-deploy
 Sample repo to demonstrate how to use github actions to host your PWA for free
 
-## In a nutshell
+## Tldr
+- Within your top level projects folder create a folder `.github` with the sub directory workflows
+- Place the file `deploy.yml` in order to setup the github workflow
+- Copy and paste the boiler plate from [here](.github/workflows/deploy.yml) and adjust the build instructions under `Install and Build > run`
+- Activate `GitHub Pages` in order to allow public access of your deployment. Go to 
+  `https://github.com/{username}/{repo_name}/settings` and go to the section GitHub Pages. Select gh-pages as source branch
+
+
+## Manual process
 The following steps are necessary to host a static website on github. Static means that GitHub will serve a public
 directory with static files (html, css, js, images, ...). You can not run a server with it so no php files or whatsoever.
 
@@ -75,5 +83,8 @@ we define our workflow. You can [checkout the file](.github/workflows/deploy.yml
     
  7. That is it! Now, everytime you push something to the main branch it will be automatically deployed and becomes publicly
 available under you gh-pages url (https://zarlex.github.io/github-deploy/)
+    
+## Serve project with custom domain
+
 
 
