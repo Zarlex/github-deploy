@@ -85,6 +85,35 @@ we define our workflow. You can [checkout the file](.github/workflows/deploy.yml
 available under you gh-pages url (https://zarlex.github.io/github-deploy/)
     
 ## Serve project with custom domain
+For this we need to purchase a domain name e.g. on https://gandi.net
+### APEX domain (example.com)
+Create the following DNS records.
+````
+@ 1800 IN A 185.199.108.153
+@ 1800 IN A 185.199.109.153
+@ 1800 IN A 185.199.110.153
+@ 1800 IN A 185.199.111.153
+www 10800 IN CNAME {username}.github.io.
+````
+Make sure to replace `{username}` with your GitHub username.
+
+### Subdomain (name.example.com)
+Create the following DNS records
+```
+### Subdomain (name.example.com)
+@ 1800 IN A 185.199.108.153
+@ 1800 IN A 185.199.109.153
+@ 1800 IN A 185.199.110.153
+@ 1800 IN A 185.199.111.153
+name 10800 IN CNAME {username}.github.io.
+```
+
+In order to use our custom Apex or Subdomain name we go back to your GitHub repository and switch to the gh-pages branch. There we need to create a file called CNAME . The content of the file is our apex or subdomain domain name. In my case it is github-deploy.zarg.es
+
+<img width="944" alt="Screenshot 2021-04-23 at 15 39 04" src="https://user-images.githubusercontent.com/2241390/115882199-d43a6a80-a44c-11eb-94fe-d48ba2ddc45b.png">
+
+Thats it. Now your project is available under your custom domain. Be aware that it takes several hours until the created DNS Records take some time until they take effect.
+
 
 
 
