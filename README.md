@@ -1,5 +1,6 @@
 # github-deploy
-Sample repo to demonstrate how to use github actions to host your PWA for free
+Sample repo to demonstrate how to use github actions to host your PWA for free.
+You can read the blog post https://zarlex.medium.com/auto-deploy-your-web-app-on-github-214776d8dd80 were i'am describing the procedure moore detailed
 
 ## Tldr
 - Within your top level projects folder create a folder `.github` with the sub directory workflows
